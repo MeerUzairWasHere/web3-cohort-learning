@@ -11,11 +11,11 @@ export function TokenLaunchpad() {
     async function createToken() {
         const mintKeypair = Keypair.generate();
         const metadata = {
-            mint: mintKeypair.publicKey,
-            name: 'KIRA',
-            symbol: 'KIR    ',
-            uri: 'https://cdn.100xdevs.com/metadata.json',
-            additionalMetadata: [],
+          mint: mintKeypair.publicKey,
+          name: "MEER",
+          symbol: "MIR    ",
+          uri: "https://firebasestorage.googleapis.com/v0/b/meeruzairwashere.appspot.com/o/files%2Fmain-logo.png%202024-10-24%2015%3A58%3A51?alt=media&token=fc7f1173-777f-4fa5-afd0-7aceef08d8ca",
+          additionalMetadata: [],
         };
 
         const mintLen = getMintLen([ExtensionType.MetadataPointer]);

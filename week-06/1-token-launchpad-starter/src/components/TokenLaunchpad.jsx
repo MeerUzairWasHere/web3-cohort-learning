@@ -24,13 +24,14 @@ export function TokenLaunchpad() {
   async function createToken() {
     const name = document.getElementById("name").value;
     const symbol = document.getElementById("symbol").value;
+    const image = document.getElementById("image").value;
     const initialSupply = document.getElementById("initialSupply").value;
     const mintKeypair = Keypair.generate();
     const metadata = {
       mint: mintKeypair.publicKey,
       name,
       symbol,
-      uri: "https://cdn.100xdevs.com/metadata.json",
+      uri: image,
       additionalMetadata: [],
     };
 
