@@ -1,22 +1,39 @@
-
-
-import { useSendTransaction } from 'wagmi'
-import { parseEther } from 'viem'
+import { useSendTransaction } from "wagmi";
+import { parseEther } from "viem";
+import { useRef } from "react";
 
 export function SendTransaction() {
-    const { data: hash, sendTransaction } = useSendTransaction()
+  const toRef = useRef(null);
+  const valueRef = useRef(null);
+  const { data: hash, sendTransaction } = useSendTransaction();
 
-    async function sendTx() {
-        const to = document.getElementById("to").value;
-        const value = document.getElementById("value").value;
-        sendTransaction({ to, value: parseEther(value) });
-    }
+  const sendTx = () => {
+    const to = toRef.current?.value;
+    const value = valueRef.current?.value;
+    if (!to || !value) return alert("Please fill all fields");
 
-    // Todo: use refs here
-    return <div>
-      <input id="to" placeholder="0xA0Cf…251e" required />
-      <input id="value" placeholder="0.05" required />
-      <button onClick={sendTx}>Send</button>
-      {hash && <div>Transaction Hash: {hash}</div>}
+    sendTransaction({ to, value: parseEther(value) });
+  };
+
+  return (
+    <div className="section card">
+      <h2>Send Transaction</h2>
+      <input
+        ref={toRef}
+        placeholder="Recipient Address (0x...)"
+        className="input"
+        required
+      />
+      <input
+        ref={valueRef}
+        placeholder="Amount (ETH)"
+        className="input"
+        required
+      />
+      <button onClick={sendTx} className="btn">
+        Send
+      </button>
+      {hash && <p className="success">Transaction Hash: {hash}</p>}
     </div>
+  );
 }
