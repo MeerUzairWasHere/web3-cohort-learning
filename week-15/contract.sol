@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 // Solidity version (^0.8.0 specified above)
 
 // Inheritance - Importing Ownable from OpenZeppelin
-import "@openzeppelin/contracts/access/Ownable.sol";
+// import "@openzeppelin/contracts/access/Ownable.sol";
 
 // External contract interface
 interface IExternalContract {
