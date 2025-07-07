@@ -45,3 +45,5 @@ This repository contains all the assignments and projects completed as part of t
 - **Week 13**: [Week 13 Canva Link](https://www.canva.com/design/DAGVOvVE1ow/wTKvuP2OnyLuvr4aAwtM-A/edit)
 
 - **Week 14**: [Creating a Cloud Wallet](https://petal-estimate-4e9.notion.site/Creating-a-cloud-wallet-1387dfd107358002a29ddf87a65d7cc5)
+
+- **Week 15**: [Solidity intro - part 1](https://www.canva.com/design/DAGWfh7FkYs/atPF0eKRrFcVvxIWs1R3Sw/edit)
